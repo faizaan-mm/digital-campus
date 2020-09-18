@@ -2,7 +2,7 @@
 <html>
 <head>
   <title> Login And Registration Form </title>
-  <link rel="stylesheet" type="text/css" href="{% static 'screens/style.css' %}">
+  <link rel="stylesheet" href="{% static 'screens/style.css' %}">
 </head>
 <body>
   <div class="hero">
@@ -13,7 +13,7 @@
         <button type="button" class="toggle-button" onclick="Register()">Register</button>
       </div>
       <div class="login-box">
-      <img src="{% static 'screens/images/download.png' %}" class="avatar" alt="Avatar Image">
+      <img src="{% static 'screens/download.png' %}" class="avatar" alt="Avatar Image">
       <form id="Login" class="input-group">
         <input type="text" class="input-field" placeholder="User ID" required>
         <input type="text" class="input-field" placeholder="Password" required>
