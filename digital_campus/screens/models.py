@@ -1,4 +1,5 @@
 from django.db import models
+
 from django.contrib.auth.models import AbstractUser
 from django.urls import reverse
 # Create your models here.
@@ -142,3 +143,5 @@ class Attendance(models.Model):
 	class_id = models.ForeignKey(Class, on_delete=models.CASCADE)
 	enrolled = models.ForeignKey(Enrolled, on_delete=models.CASCADE)
 	counter = models.IntegerField()
+
+
