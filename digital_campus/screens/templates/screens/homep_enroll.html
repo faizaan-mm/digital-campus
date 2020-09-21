@@ -10,7 +10,7 @@
         <div class = "hero">
         <div class = "nav-bar">
             <div class = "nav-logo">
-                <img src="{% static 'screens/download.png' %}">
+                <img src="{%static 'screens/download.png' %}">
             </div>
             <div class="nav-links" id="nav-links">
                 <i class="fa fa-close" onclick="closeMenu()"></i>
@@ -46,10 +46,10 @@
     
   </div>
   <div class="column" ;>
-   <input type="text" id="fname" name="fname" ><br><br>
+   <input type="text" id="fname" name="fname" required><br><br>
    <input type="text" id="mname" name="mname" ><br><br>
-   <input type="text" id="lname" name="lname" ><br><br>
-   <input type="text" id="regno" name="regno" ><br><br>   
+   <input type="text" id="lname" name="lname" required><br><br>
+   <input type="text" id="regno" name="regno" required><br><br>   
     
   </div>
         </div>   

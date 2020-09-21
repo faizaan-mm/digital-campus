@@ -31,3 +31,16 @@ def Schedule_class(request):
     template = loader.get_template('screens/Schedule class.html')
     context = {}
     return HttpResponse(template.render(context, request))
+
+def register(request):
+    print(request.POST.get('Email ID'))
+    template = loader.get_template('screens/Login.html')
+    context = {}
+    return HttpResponse(template.render(context, request))
+
+def scheduletest(request):
+    template = loader.get_template('screens/scheduletest.html')
+    context = {}
+    return HttpResponse(template.render(context, request))
+    
+
