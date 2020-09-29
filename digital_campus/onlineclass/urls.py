@@ -1,8 +1,5 @@
 from django.urls import path
 from . import views
 
-app_name = 'onlineclass'
-
-urlpatterns = [
-
-]
+urlpatterns = [path('',views.login)
+             ]
