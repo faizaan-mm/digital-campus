@@ -13,9 +13,9 @@ class Campus(models.Model):
 
 class User(AbstractUser):
 
-	user_type = models.IntegerField(blank=False, null=False)
-	name = models.CharField(null=False, blank=False, max_length=50)
-	campus = models.ForeignKey(Campus, on_delete=models.CASCADE, null=False)
+	user_type = models.IntegerField(blank=True, null=True)
+	name = models.CharField(null=True, blank=True, max_length=50)
+	campus = models.ForeignKey(Campus, on_delete=models.CASCADE, null=True)
 
 	def __str__(self):
 		return self.first_name

@@ -1,0 +1,305 @@
+{%load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+body{
+background-image: url('{% static "exm.jpg" %}');
+}
+.button {
+  display: inline-block;
+  padding: 6px 10px;
+  font-size: 10px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration-style: solid;
+  outline: none;
+  color: #fff;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 100px;
+  box-shadow: 0 4px #222;
+}
+.button2 {background-color: #008CBA;}
+
+.button:hover {background-color: #ffffff;}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
+
+
+<script>
+function text()
+{
+
+document.getElementById('labelid1').innerHTML=formid.month[formid.month.selectedIndex].text
+document.getElementById('labelid2').innerHTML=formid.month[formid.month.selectedIndex].text
+document.getElementById('labelid3').innerHTML=formid.month[formid.month.selectedIndex].text
+document.getElementById('labelid4').innerHTML=formid.month[formid.month.selectedIndex].text
+document.getElementById('labelid5').innerHTML=formid.month[formid.month.selectedIndex].text
+document.getElementById('labelid6').innerHTML=formid.month[formid.month.selectedIndex].text
+document.getElementById('labelid7').innerHTML=formid.month[formid.month.selectedIndex].text
+document.getElementById('labelid8').innerHTML=formid.month[formid.month.selectedIndex].text
+document.getElementById('labelid9').innerHTML=formid.month[formid.month.selectedIndex].text
+document.getElementById('labelid10').innerHTML=formid.month[formid.month.selectedIndex].text
+}
+</script>
+
+	<title>Page Title</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+<h1><b> SCHEDULE TEST</b></h1>
+
+
+
+<div style="display:flex">
+<form name="formid">
+   <select name="month" class="p-3 mb-2 bg-primary text-white" onChange="text()" style="padding:10px 5px 15px 20px;margin:5px;">
+       <option value="select"></b>-Select Month-<b></option>
+        <option value="jan">January</option>
+        <option value="feb">February</option>
+        <option value="march">March</option>
+        <option value="april">April</option>
+        <option value="may">May</option>
+        <option value="june">June</option>
+        <option value="july">July</option>
+        <option value="aug">August</option>
+        <option value="sep">September</option>
+        <option value="oct">October</option>
+        <option value="nov">November</option>
+        <option value="dec">December</option>
+   </select>
+</form>
+            
+<select name="year" id="year" class="p-3 mb-2 bg-primary text-white" style="padding:10px 5px 15px 20px;margin:5px;">
+<option value="select"></b>-Select Year-<b></option>
+<option value="2017">2017</option>
+<option value="2018">2018</option>
+<option value="2019">2019</option>
+<option value="2020">2020</option>
+<option value="2021">2021</option>
+<option value="2022">2022</option>
+<option value="2023">2023</option>
+<option value="2024">2024</option>
+
+
+</select>
+
+
+</div>
+
+
+
+
+<br>
+
+
+<div style="height:400px;overflow:auto;">
+  <table border=1px >
+    <tr>
+      <th></th>
+      <th style="height:100px;width:250px" >8AM </th>
+      <th style="height:100px;width:250px">10AM </th>
+      <th style="height:100px;width:250px">12PM </th>
+      <th style="height:100px;width:250px">2PM </th>
+      <th style="height:100px;width:250px">4PM </th>
+      <th style="height:100px;width:250px">5PM </th>
+      //<th style="height:100px;width:250px">6PM </th>
+      
+    </tr>
+    <tr>
+      <td style="height:70px;width:50px"><b> 1 <label id="labelid1"></b></label></td>
+     <td style="text-align:right;"><div id="1"></div> <div id="2"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+      <td style="text-align:right;"><div id="3"></div> <div id="4"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="5"></div> <div id="6"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="7"></div> <div id="8"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="9"></div> <div id="10"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="10"></div> <div id="12"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="12"></div> <div id="14"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  
+	  
+      
+      
+      
+   
+    </tr>
+    <tr>
+      <td style="height:70px;width:200px;"><b>2 <label id="labelid10"></b></label></td>
+      <td style="text-align:right;"><div id="1"></div> <div id="2"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+      <td style="text-align:right;"><div id="3"></div> <div id="4"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="5"></div> <div id="6"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="7"></div> <div id="8"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="9"></div> <div id="10"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="10"></div> <div id="12"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="12"></div> <div id="14"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+     
+    </tr>
+    
+	<tr>
+      <td style="height:70px;width:50px"><b>3 <label id="labelid2"></b></label></td>
+     <td style="text-align:right;"><div id="1"></div> <div id="2"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+      <td style="text-align:right;"><div id="3"></div> <div id="4"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="5"></div> <div id="6"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="7"></div> <div id="8"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="9"></div> <div id="10"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="10"></div> <div id="12"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="12"></div> <div id="14"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+     
+    </tr>
+	<tr>
+      <td style="height:70px;width:50px"><b>4 <label id="labelid3"></b></label></td>
+   <td style="text-align:right;"><div id="1"></div> <div id="2"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+      <td style="text-align:right;"><div id="3"></div> <div id="4"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="5"></div> <div id="6"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="7"></div> <div id="8"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="9"></div> <div id="10"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="10"></div> <div id="12"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="12"></div> <div id="14"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+     
+    </tr>
+	<tr>
+      <td style="height:70px;width:50px"><b>5 <label id="labelid4"></b></label></td>
+ <td style="text-align:right;"><div id="1"></div> <div id="2"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+      <td style="text-align:right;"><div id="3"></div> <div id="4"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="5"></div> <div id="6"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="7"></div> <div id="8"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="9"></div> <div id="10"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="10"></div> <div id="12"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="12"></div> <div id="14"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+     
+    </tr>
+	<tr>
+      <td style="height:70px;width:50px"><b>6 <label id="labelid5"></b></label></td>
+     <td style="text-align:right;"><div id="1"></div> <div id="2"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+      <td style="text-align:right;"><div id="3"></div> <div id="4"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="5"></div> <div id="6"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="7"></div> <div id="8"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="9"></div> <div id="10"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="10"></div> <div id="12"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="12"></div> <div id="14"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  
+     
+    </tr>
+	<tr>
+      <td style="height:70px;width:50px"><b>7 <label id="labelid6"></b></label></td>
+   <td style="text-align:right;"><div id="1"></div> <div id="2"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+      <td style="text-align:right;"><div id="3"></div> <div id="4"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="5"></div> <div id="6"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="7"></div> <div id="8"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="9"></div> <div id="10"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="10"></div> <div id="12"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="12"></div> <div id="14"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+     
+    </tr>
+	<tr>
+      <td style="height:70px;width:50px"><b>8 <label id="labelid7"></b></label></td>
+     <td style="text-align:right;"><div id="1"></div> <div id="2"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+      <td style="text-align:right;"><div id="3"></div> <div id="4"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="5"></div> <div id="6"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="7"></div> <div id="8"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="9"></div> <div id="10"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="10"></div> <div id="12"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="12"></div> <div id="14"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+    </tr>
+	<tr>
+      <td style="height:70px;width:50px"><b>9 <label id="labelid8"></b></label></td>
+     <td style="text-align:right;"><div id="1"></div> <div id="2"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+      <td style="text-align:right;"><div id="3"></div> <div id="4"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="5"></div> <div id="6"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="7"></div> <div id="8"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="9"></div> <div id="10"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="10"></div> <div id="12"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="12"></div> <div id="14"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+     
+    </tr>
+	<tr>
+      <td style="height:70px;width:50px"><b>10 <label id="labelid9"></b></label></td>
+   <td style="text-align:right;"><div id="1"></div> <div id="2"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+      <td style="text-align:right;"><div id="3"></div> <div id="4"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="5"></div> <div id="6"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="7"></div> <div id="8"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="9"></div> <div id="10"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="10"></div> <div id="12"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+	  <td style="text-align:right;"><div id="12"></div> <div id="14"></div><button class="button" data-toggle="modal" data-target="#exampleModal">+</button></td>
+     
+    </tr>
+	
+  </table>
+</div>
+
+
+
+
+<!--Modal-->
+    <div class="modal" id="exampleModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Enter the Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <select name="subjects" id="subjects" style="margin:5px;width:180px">
+                        <option value="select"><b>-Select Subject-</b></option>
+                        <option value="Physics">Physics</option>
+                        <option value="Chemistry">Chemistry</option>
+                        <option value="Maths">Maths</option>
+                        <option value="History">History</option>
+                        <option value="Geography">Geography</option>
+                    </select>
+                    <select name="semester" id="semester" style="width:180px;">
+                        <option value="select"><b>-Select Semester-</b></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+					
+					<select name="Duration" id="duration" style="margin:5px;width:180px;">
+                        <option value="select"><b>-Duration of test-</b></option>
+                        <option value="1">1 HOUR</option>
+                        <option value="2">2 HOUR</option>
+                        <option value="3">3 HOUR</option>
+                        <option value="4">4 HOUR</option>  
+                    </select>
+					
+					<input type="text" placeholder="Enter Maximum Marks" style="height:25px;width:180px;">
+					
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="apply">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+   
+    <script type="text/javascript">
+                     $(document).ready(function(){
+                        $("#apply").click(function () {
+                            var data = $("#exampleModal #subjects").val().trim();
+                            var data1 = $("#exampleModal #semester").val().trim();
+                        })
+                    });
+    </script>
+	<br>
+	<p align="right">
+	<button style="height:50px;width:200px" class="p-3 mb-2 bg-primary text-white" type="button">SAVE CHANGES</button>
+	</p>
+</body>
+</html>

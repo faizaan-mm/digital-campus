@@ -1,0 +1,50 @@
+{% load static %}
+<html>
+<head>
+  <title> Login And Registration Form </title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+  <div class="hero">
+    <div class="form-box">
+      <div class = "button-box">
+        <div id="button">  </div>
+        <button type="button" class="toggle-button" onclick="Login()">Log In</button>
+        <button type="button" class="toggle-button" onclick="Register()">Register</button>
+      </div>
+      <div class="login-box">
+      <img src="{% static 'download.png' %}" class="avatar" alt="Avatar Image">
+      <form id="Login" class="input-group">
+        <input type="text" class="input-field" id="user-ID" placeholder="User ID" required>
+        <input type="text" class="input-field" id="password" placeholder="Password" required>
+        <input type="checkbox" class="check-box"id="Rpassword"><span>Remember Password</span>
+        <button type="submit" class="submit-button" id="loginbtn">Login</button>
+      </form>
+      <form id="Register" class="input-group">
+        <input type="text" class="input-field" id="rnumber" placeholder="Registration Number" required>
+        <input type="text" class="input-field" id="mail-ID" placeholder="Email ID" required>
+        <input type="text" class="input-field" id="epassword" placeholder="Enter Password" required>
+        <input type="checkbox" class="check-box" id="confirm"><span>I accept the terms and conditions.</span>
+        <button type="submit" class="submit-button" id="submitbtn">Send Details to Admin</button>
+      </form>
+</div>
+</div>
+   </div>
+ <script>
+  var x = document.getElementById("Login");
+  var y = document.getElementById("Register");
+  var z = document.getElementById("button");
+
+  function Login(){
+    x.style.left = "50px";
+    y.style.left = "450px";
+    z.style.left = "0";
+  }
+  function Register(){
+    x.style.left = "-400px";
+    y.style.left = "50px";
+    z.style.left = "110px";
+  }
+ </script>
+</body>
+</html>
