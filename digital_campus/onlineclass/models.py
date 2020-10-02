@@ -75,7 +75,6 @@ class Enrolled(models.Model):
 
 	student = models.ForeignKey(Student, on_delete=models.CASCADE)
 	course = models.ForeignKey(Course, on_delete=models.CASCADE)
-	section = models.ForeignKey(Section, on_delete=models.CASCADE)
 
 
 class Teaches(models.Model):
