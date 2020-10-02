@@ -18,7 +18,7 @@ class User(AbstractUser):
 	campus = models.ForeignKey(Campus, on_delete=models.CASCADE, null=True)
 
 	def __str__(self):
-		return self.first_name
+		return self.username
 
 
 class Department(models.Model):
@@ -29,14 +29,19 @@ class Department(models.Model):
     def __str__(self):
         return self.name
 
+class Section(models.Model):
+
+	dept = models.ForeignKey(Department, on_delete=models.CASCADE)
+	name = models.CharField(max_length=2)
+	sem = models.IntegerField(blank=False, null=False)
+
+	def __str__(self):
+		return self.name
 
 class Student(models.Model):
 
 	user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
-	regno = models.IntegerField(blank=False, null=False, unique=True)
-	dept = models.OneToOneField(Department, on_delete=models.CASCADE)
-	sem = models.IntegerField(blank=False, null=False)
-	section = models.CharField(max_length=2)
+	section = models.ForeignKey(Section, on_delete=models.PROTECT,)
 	birth_date = models.DateField(null=False, verbose_name="Birth Date")
 
 	def __str__(self):
@@ -46,7 +51,7 @@ class Student(models.Model):
 class Faculty(models.Model):
 
 	user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
-	dept = models.OneToOneField(Department, on_delete=models.CASCADE)
+	dept = models.ForeignKey(Department, on_delete=models.CASCADE)
 	designation = models.CharField(max_length=50)
 	qualifications = models.CharField(max_length=50)
 	birth_date = models.DateField(null=False, verbose_name="Birth Date")
@@ -58,19 +63,9 @@ class Faculty(models.Model):
 class Course(models.Model):
 
 	dept = models.ForeignKey(Department, on_delete=models.CASCADE)
-	credits = models.IntegerField(blank=False, null=False, unique=True)
+	credits = models.IntegerField(blank=False, null=False, unique=False)
 	name = models.CharField(max_length=50)
 	description = models.CharField(max_length=500)
-
-	def __str__(self):
-		return self.name
-
-
-class Section(models.Model):
-
-	dept = models.ForeignKey(Department, on_delete=models.CASCADE)
-	name = models.CharField(max_length=2)
-	sem = models.IntegerField(blank=False, null=False)
 
 	def __str__(self):
 		return self.name

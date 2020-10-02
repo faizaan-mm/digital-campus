@@ -19,9 +19,9 @@
                     <a href="#"><li>Schedule Class</li></a>
                     <a href="#"><li>Schedule Exam</li></a>
                     <a href="#"><li>Publish Results</li></a>
-                    <a href="Login.html"><li>Log Out</li></a>
+                    <a href="{% url 'onlineclass:Logout' %}"><li>Log Out</li></a>
                 </ul>
-                <button type="button" class="btn">Enroll Member</button>
+                <a href="{% url 'onlineclass:register' %}"> <button type="button" class="btn">Enroll Member</button> </a> 
             </div> 
             <i class="fa fa-bars" onclick="showMenu()"></i>
         </div>

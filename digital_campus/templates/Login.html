@@ -14,12 +14,15 @@
       </div>
       <div class="login-box">
       <img src="{% static 'download.png' %}" class="avatar" alt="Avatar Image">
-      <form id="Login" class="input-group">
-        <input type="text" class="input-field" id="user-ID" placeholder="User ID" required>
-        <input type="text" class="input-field" id="password" placeholder="Password" required>
+
+      <form id="Login" class="input-group" action="{% url 'onlineclass:Login' %}" method="POST">
+        <input type="text" class="input-field" id="user-ID" placeholder="User ID" name="userid" required>
+        <input type="password" class="input-field" id="password" placeholder="Password" name="password" required>
         <input type="checkbox" class="check-box"id="Rpassword"><span>Remember Password</span>
         <button type="submit" class="submit-button" id="loginbtn">Login</button>
+        {% csrf_token %}
       </form>
+      
       <form id="Register" class="input-group">
         <input type="text" class="input-field" id="rnumber" placeholder="Registration Number" required>
         <input type="text" class="input-field" id="mail-ID" placeholder="Email ID" required>
