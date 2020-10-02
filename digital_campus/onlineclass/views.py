@@ -102,17 +102,51 @@ def Logout(request):
 @login_required
 def studenthome(request):
     if request.user.is_authenticated:
-        template = loader.get_template('studenthome.html')
-        context = {}
-        return HttpResponse(template.render(context, request))
+        student = Student.objects.filter(user_id=request.session['user']).first()
+        if request.method == 'POST':
+            subject = request.POST.get('subject')
+            course = Course.objects.filter(pk=subject).first()
+            enrolled = Enrolled(student=student, course=course)
+            enrolled.save()
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+        else:
+            courses = Course.objects.filter(dept=student.section.dept).all()
+            enrolled = Enrolled.objects.filter(student=student).all()
+            enc = []
+            displayable = []
+            for e in enrolled:
+                enc.append(e.course)
+            for c in courses:
+                if c not in enc:
+                    displayable.append(c)
+            print(enc)
+            print(displayable)
+            return render(request, 'studenthome.html',{'courses':displayable,'enrolled':enrolled})
     else:
         return redirect('onlineclass:Login')
 
 @login_required
 def teacherhome(request):
     if request.user.is_authenticated:
-        template = loader.get_template('teacherhome.html')
-        context = {}
-        return HttpResponse(template.render(context, request))
+        faculty = Faculty.objects.filter(user_id=request.session['user']).first()
+        if request.method == 'POST':
+            subject = request.POST.get('subject')
+            course = Course.objects.filter(pk=subject).first()
+            teaches = Teaches(instructor=faculty, course=course)
+            teaches.save()
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+        else:
+            courses = Course.objects.filter(dept=faculty.dept).all()
+            enrolled = Teaches.objects.filter(instructor=faculty).all()
+            enc = []
+            displayable = []
+            for e in enrolled:
+                enc.append(e.course)
+            for c in courses:
+                if c not in enc:
+                    displayable.append(c)
+            print(enc)
+            print(displayable)
+            return render(request, 'teacherhome.html',{'courses':displayable,'teaches':enrolled})
     else:
         return redirect('onlineclass:Login')
