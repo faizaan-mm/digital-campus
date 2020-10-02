@@ -12,6 +12,13 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+import environ
+env = environ.Env(
+    # set casting, default value
+    DEBUG=(bool, False)
+)
+# reading .env file
+environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -80,10 +87,10 @@ WSGI_APPLICATION = 'digital_campus.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'digital_campus',
-        'USER': 'digital-campus',
-        'PASSWORD': 'DigitalCampus@MIT@CISCO2020',
-        'HOST': '68.183.95.230',
+        'NAME': env("database"),
+        'USER': env("user"),
+        'PASSWORD': env("passwd"),
+        'HOST': env("host"),
         'PORT': '3306',
     }
 }
