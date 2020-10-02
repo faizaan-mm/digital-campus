@@ -1,2 +1,2 @@
 # digital-campus
-Digital Campus Project for Cisco 
+Digital Campus Project 
