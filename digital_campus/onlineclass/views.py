@@ -7,6 +7,7 @@ from django.contrib.auth.hashers import make_password, check_password
 from django.contrib.auth import authenticate, login as auth_login, logout
 import csv, io
 
+
 def Login(request):
     if request.method == 'POST':
         userid = request.POST.get('userid')  # Get username and password
