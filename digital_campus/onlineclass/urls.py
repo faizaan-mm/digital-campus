@@ -14,4 +14,5 @@ urlpatterns = [
     path('scheduletest/',views.scheduletest,name='scheduletest'),
     path('studenthome/',views.studenthome,name='studenthome'),
     path('teacherhome/',views.teacherhome,name='teacherhome'),
+    path('chat_basic/',views.chat_basic,name='chat_basic'),
 ]

@@ -99,6 +99,8 @@ def scheduletest(request):
 def Logout(request):
     logout(request)
     return redirect('onlineclass:Login')
+def chat_basic(request):
+    return redirect('http://localhost:3000/')
 
 @login_required
 def studenthome(request):
