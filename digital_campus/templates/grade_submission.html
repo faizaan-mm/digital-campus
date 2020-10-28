@@ -1,0 +1,220 @@
+<html>
+    <head>
+        <title>Grade Submission</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel = "stylesheet" href = "grade_submission.css">
+        <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+   
+    </head>
+    <body>
+        <div class = "hero">
+        <div class = "nav-bar">
+            <div class = "nav-logo">
+                <img src="download.png">
+            </div>
+            <div class="nav-links" id="nav-links">
+                <i class="fa fa-close" onclick="closeMenu()"></i>
+                <ul>
+                    <a href="#"><li>Personal Details</li></a>
+                    <a href="#"><li>Class Details</li></a>
+                    <a href="#"><li>Check Schedule</li></a>
+                    <a href="#"><li>Declare Results</li></a>
+                    <a href="#"><li>Start Class</li></a>
+                    <a href="Login.html"><li>Log Out</li></a>   
+                </ul>
+                <button type="button" class="btn">Submissions</button>
+            </div> 
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </div>
+        
+        <div class="vertical-bar">
+            <div class="search-icon">
+                <i class="fa fa-th-list"></i>
+                <i class="fa fa-search"></i>
+            </div>
+            <div class="help-icon">
+                <a href="chatbox intro.html"><i class="fa fa-comments"></i></a>
+                <i class="fa fa-question"></i>
+            </div>    
+        </div> 
+   
+        <div class="form-box">
+            
+            <div class="form-group row ">
+                <div class="col-3">
+                 <label for="subject">Subject</label>
+                    <select class="custom-select">
+                        <option selected>Choose Subject</option>
+                        <option value="1">Math</option>
+                        <option value="2">Science</option>
+                        <option value="3">Social Studies</option>
+                        <option value="4">English</option>
+                    </select>
+                </div>
+                <div class="col-3">
+                 <label for="test">Test</label>
+                    <select class="custom-select">
+                        <option selected>Choose Test</option>
+                        <option value="1">Internal 1</option>
+                        <option value="2">Internal 2</option>
+                        <option value="3">Externals 1</option>
+                        <option value="4">Externals 2</option>
+                    </select>
+                </div>
+            </div>
+
+            <form>
+            <div style="height:300px; overflow-x:hidden; overflow-y:scroll;">
+              <table>
+                
+                    <tr>
+                      <th>Student Name</th>
+                      <th>File</th>
+                      <th>Marks Obtained</th>
+                      <th>Maximum Marks</th>
+                      
+                    </tr>
+                
+               
+                    <tr>
+                      <td>Student#1</td>
+                      <td><a href="#" style="color: #000000;" download>file#1</td>
+                      <td><input type = "text" id = "marksob" name = "marksob" /></td>
+                      <td><input type = "text" id = "marksob" name = "marksob" /></td>
+                      
+                    <tr>
+                      <td>Student#2</td>
+                      <td><a href="#" style="color: #000000;" download>file#2</td>
+                      <td><input type = "text" id = "marksob" name = "marksob" /></td>
+                      <td><input type = "text" id = "marksob" name = "marksob" /></td>
+                      
+                    <tr>
+                      <td>Student#3</td>
+                      <td><a href="#" style="color: #000000;" download>file#3</td>
+                      <td><input type = "text" id = "marksob" name = "marksob" /></td>
+                      <td><input type = "text" id = "marksob" name = "marksob" /></td>
+                     
+                    </tr>
+                    <tr>
+                      <td>Student#4</td>
+                      <td><a href="#" style="color: #000000;" download>file#4</td>
+                      <td><input type = "text" id = "marksob" name = "marksob" /></td>
+                      <td><input type = "text" id = "marksob" name = "marksob" /></td>
+                    
+                    <tr>
+                      <td>Student#5</td>
+                      <td><a href="#" style="color: #000000;" download>file#5</td>
+                      <td><input type = "text" id = "marksob" name = "marksob" /></td>
+                      <td><input type = "text" id = "marksob" name = "marksob" /></td>
+                     
+                    <tr>
+                      <td>Student#6</td>
+                      <td><a href="#" style="color: #000000;" download>file#6</td>
+                      <td><input type = "text" id = "marksob" name = "marksob" /></td>
+                      <td><input type = "text" id = "marksob" name = "marksob" /></td>
+                     
+                    <tr>
+                      <td>Student#7</td>
+                      <td><a href="#" style="color: #000000;" download>file#7</td>
+                      <td><input type = "text" id = "marksob" name = "marksob" /></td>
+                      <td><input type = "text" id = "marksob" name = "marksob" /></td>
+                      
+                    </tr>
+                    <tr>
+                      <td>Student#8</td>
+                      <td><a href="#" style="color: #000000;" download>file#8</td>
+                      <td><input type = "text" id = "marksob" name = "marksob" /></td>
+                      <td><input type = "text" id = "marksob" name = "marksob" /></td>
+                      
+                    </tr>
+                    <tr>
+                      <td>Student#9</td>
+                      <td><a href="#" style="color: #000000;" download>file#9</td>
+                      <td><input type = "text" id = "marksob" name = "marksob" /></td>
+                      <td><input type = "text" id = "marksob" name = "marksob" /></td>
+                      
+                    </tr>
+                    <tr>
+                      <td>Student#10</td>
+                      <td><a href="#" style="color: #000000;" download>file#10</td>
+                      <td><input type = "text" id = "marksob" name = "marksob" /></td>
+                      <td><input type = "text" id = "marksob" name = "marksob" /></td>
+                      
+                    </tr>
+                    <tr>
+                      <td>Student#11</td>
+                      <td><a href="#" style="color: #000000;" download>file#11</td>
+                      <td><input type = "text" id = "marksob" name = "marksob" /></td>
+                      <td><input type = "text" id = "marksob" name = "marksob" /></td>
+                      
+                    </tr>
+                    <tr>
+                      <td>Student#12</td>
+                      <td><a href="#" style="color: #000000;" download>file#12</td>
+                      <td><input type = "text" id = "marksob" name = "marksob" /></td>
+                      <td><input type = "text" id = "marksob" name = "marksob" /></td>
+                      
+                    </tr>
+                    <tr>
+                      <td>Student#13</td>
+                      <td><a href="#" style="color: #000000;" download>file#13</td>
+                      <td><input type = "text" id = "marksob" name = "marksob" /></td>
+                      <td><input type = "text" id = "marksob" name = "marksob" /></td>
+                      
+                    </tr>
+                    <tr>
+                      <td>Student#14</td>
+                      <td><a href="#" style="color: #000000;" download>file#14</td>
+                      <td><input type = "text" id = "marksob" name = "marksob" /></td>
+                      <td><input type = "text" id = "marksob" name = "marksob" /></td>
+                      
+                    </tr>
+                    <tr>
+                      <td>Student#15</td>
+                      <td><a href="#" style="color: #000000;" download>file#15</td>
+                      <td><input type = "text" id = "marksob" name = "marksob" /></td>
+                      <td><input type = "text" id = "marksob" name = "marksob" /></td>
+                      
+                    </tr>
+                
+              </table>
+              </div>
+              <div>
+            <input type="button" value="Save Changes" />  
+        </div>
+        </div>
+
+        </div>
+        <script>
+            // Change the selector if needed
+/*var $table = $('table.scroll'),
+    $bodyCells = $table.find('tbody tr:first').children(),
+    colWidth;
+
+// Adjust the width of thead cells when window resizes
+$(window).resize(function() {
+    // Get the tbody columns width array
+    colWidth = $bodyCells.map(function() {
+        return $(this).width();
+    }).get();
+    
+    // Set the width of thead columns
+    $table.find('thead tr').children().each(function(i, v) {
+        $(v).width(colWidth[i]);
+    });    
+}).resize(); // Trigger resize handler*/
+            var show = document.getElementById("nav-links");
+            function showMenu(){
+                show.style.right = "0";
+
+            }
+            function closeMenu(){
+                show.style.right = "-200px";
+                
+            }
+
+        </script>
+    </body>
+</html>
