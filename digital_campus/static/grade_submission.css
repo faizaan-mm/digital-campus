@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.hero{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(5.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    position: relative;
+}
+.nav-bar{
+    display: flex;
+    padding: 20px 100px;
+}
+.nav-logo img{
+    width: 135px;
+}
+.nav-links{
+    flex:1;
+}
+.nav-links ul{
+    margin-left: 30px;
+    display: inline;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 20px 10px;
+}
+.nav-links ul a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 17px;
+}
+.nav-links ul li::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background: rgb(229, 255, 0);
+    display: block;
+    margin: auto;
+    transition: .5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.btn{
+    padding: 20px 20px;
+    border: 0;
+    border-radius: 50%;
+    background: yellow;
+    font-weight: bolder;
+    cursor: pointer;
+}
+input[type="button"] {
+    margin: 20px 20px;
+    border: 0;
+    background: yellow;
+    font-weight: bolder;
+    height:50px;
+    width:150px;
+    cursor: pointer;
+    float: right;
+    outline: none;
+}
+
+.nav-links .btn{
+    float: right;
+    border-radius: 50%;
+}
+.banner-title{
+    margin: 20px 100px;
+    color: #ffffff;
+}
+.banner-title h1{
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.banner-title h1 span{
+    color: rgb(241, 241, 14);
+}
+.vertical-bar{
+    height: 100%;
+    background: #000000;
+    top: 0;
+    left: 0;
+    position: absolute;   
+}
+.search-icon{
+    height: 60%;
+    width: 80px;
+}
+.search-icon .fa{
+    margin: 45px 23px;
+    display: block;
+    color: whitesmoke;
+    font-size: 30px;
+    cursor: pointer;
+}
+.help-icon{
+    height: 35%;
+    width: 80px;
+    background: rgb(251, 255, 0);
+    text-align: center;
+    padding-top: 27%;
+    bottom: 0;
+    position: absolute;
+}
+.help-icon .fa{
+    margin: 25px 15px;
+    display: block;
+    padding: 15px;
+    border: 1px solid;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.help-icon a:link{
+    text-decoration: none;
+}
+.form-box{
+    width: 1200px;
+    height: 490px;
+    position: relative;
+    margin: auto;
+    background: #9e9c9c8a;
+    padding: 20px;
+  }
+.form-box{
+    margin: 30px 100px;
+    color: #ffffff;
+}
+.form-box h1{
+    font-size: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+    padding: 120px 20px;
+}
+.form-box h1 span{
+    color: rgb(243, 243, 13)
+}
+.nav-bar .fa{
+    display: none;
+}
+.pic-container {
+  width: 1350px;
+  margin: 0 auto;
+  white-space: nowrap;
+}
+
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  width: 25%;
+  padding: 12px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+tr:nth-child(odd){background-color: #c1c1c1}
+
+@media (max-width: 700px){
+    .vertical-bar{
+        display:none;
+    }
+    .banner-title{
+        margin: 80px 40px;
+    }
+    .banner-title h1{
+        font-size: 50px;
+    }
+    .nav-bar{
+        padding: 10px 30px;
+    }
+    .fa-bars{
+        position: absolute;
+        right: 20px;
+        top: 10px;
+    }
+    .nav-bar .fa{
+        display: block;
+        color: #ffffff;
+        margin: 10px 25px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links{
+        height: 100vh;
+        width: 200px;
+        background: #000000;
+        top: 0;
+        right: -200px;
+        position: absolute;
+        text-align: left;
+        z-index: 2;
+    }
+    .nav-links ul a{
+        display: block;
+    }
+    .nav-links .btn{
+        float: none;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+}
